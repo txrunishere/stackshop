@@ -27,7 +27,11 @@ export const Header = () => {
               </NavigationLink>
             </nav>
           </div>
-          <div>Cart</div>
+          <Link to="/cart" className="text-foreground flex items-center gap-2 rounded-full border border-slate-200/60 bg-slate-100/50 px-4 py-2 transition-all duration-300 hover:border-slate-300 dark:border-slate-800/60 dark:bg-slate-900/50 dark:hover:border-slate-700">
+            <span className="text-sm font-bold">Cart</span>
+            <span className="text-sm bg-black text-white rounded-full px-1.5">0</span>
+            <span className="hidden md:inline text-sm">$10</span>
+          </Link>
         </div>
       </div>
     </header>
