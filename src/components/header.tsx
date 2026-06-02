@@ -20,7 +20,7 @@ export const Header = () => {
               </span>
             </Link>
             {/* Navigation Links */}
-            <nav className="hidden items-center gap-6 rounded-full border border-slate-200/60 bg-slate-100/50 p-1 px-4 transition-all duration-300 md:flex dark:border-slate-800/60 dark:bg-slate-900/50">
+            <nav className="hidden items-center gap-2 rounded-full border border-slate-200/60 bg-slate-100/50 p-1 px-1 transition-all duration-300 md:flex dark:border-slate-800/60 dark:bg-slate-900/50">
               <NavigationLink to="/products">Products</NavigationLink>
               <NavigationLink to="/create-product">
                 Create Product
@@ -48,7 +48,7 @@ const NavigationLink = ({
   return (
     <Link
       to={to}
-      className="flex items-center rounded-full py-1.5 text-xs font-semibold tracking-wide text-slate-600 transition-all duration-200 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-200 [&.active]:bg-white [&.active]:text-slate-950 [&.active]:shadow-xs dark:[&.active]:bg-slate-950 dark:[&.active]:text-white dark:[&.active]:shadow-md"
+      className="flex items-center rounded-full px-2 py-1.5 text-xs font-semibold tracking-wide text-slate-600 transition-all duration-200 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-200 [&.active]:bg-white [&.active]:text-slate-950 [&.active]:shadow-xs dark:[&.active]:bg-slate-950 dark:[&.active]:text-white dark:[&.active]:shadow-md"
       activeProps={{ className: "active" }}
     >
       {children}
