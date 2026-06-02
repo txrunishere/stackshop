@@ -6,8 +6,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { ArrowRightIcon } from "lucide-react";
-import { products as sampleProducts } from "#/data/products";
-import { ProductCard } from "#/components/product-card";
+import { products as sampleProducts } from "@/data/products";
+import { ProductCard } from "@/components";
 
 export const Route = createFileRoute("/")({
   component: App,
@@ -20,7 +20,7 @@ function App() {
   const { products } = Route.useLoaderData();
 
   return (
-    <div className="space-y-12 rounded bg-linear-to-b from-slate-100 to-white p-6">
+    <div className="space-y-8 rounded bg-linear-to-b from-slate-100 to-white p-6">
       <section>
         <Card className="bg-white/80 p-8 shadow-md">
           <p className="text-sm font-semibold tracking-wide text-blue-600 uppercase">
@@ -41,7 +41,7 @@ function App() {
         </Card>
       </section>
 
-      <section className="mx-auto space-y-4">
+      <section className="space-y-4">
         <Card className="bg-white/80 p-6 shadow-md">
           <div className="flex items-center justify-between">
             <div>
