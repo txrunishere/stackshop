@@ -7,16 +7,23 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { createFileRoute } from "@tanstack/react-router";
+import { createServerFn } from "@tanstack/react-start";
+
+const fetchProducts = createServerFn({
+  method: "GET",
+}).handler(async () => {
+  return products;
+});
 
 export const Route = createFileRoute("/products/")({
   component: RouteComponent,
   loader: async () => {
-    return { products };
+    return fetchProducts();
   },
 });
 
 function RouteComponent() {
-  const { products } = Route.useLoaderData();
+  const products = Route.useLoaderData();
 
   return (
     <div className="space-y-6">
